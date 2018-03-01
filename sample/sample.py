@@ -8,6 +8,13 @@ def parse_data(filename):
 
 
 # slide area, etc (jack)
+def slice_data(d):
+    rows = d['rows']
+    cols = d['cols']
+    maxSlice = d['cells_per_slice']
+
+    
+
 
 # can be used (alex)
 
