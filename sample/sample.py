@@ -25,9 +25,22 @@ def parse_data(filename):
 # slide area, etc (jack)
 
 # can be used (alex)
-def is_valid_slice(sliceSizeData,ruleData,ingData):
+def is_valid_slice(sliceSizeData,formalSliceData,ruleData,ingData, numSlice):
+    bucket = []
     # checking ingredients in the slice row
+    for iSlice in (0, numSlice):
+        for ingredient in sliceSizeData[iSlice]:
+            countT = 0
+            countM = 0
+            if ingredient == 'T':
+                countT+= 1
+            elif ingredient == 'M':
+                countM += 1
+        x = ruleData['ing_per_slice']
+        if countT >= x and countM >= x:
+            bucket.append([formalSliceData])
     print('this is here so the outlin of this function dose not break everything')
+    return bucket
 
 # scoring (bradley)
 
