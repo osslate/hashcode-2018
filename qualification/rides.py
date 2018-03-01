@@ -9,15 +9,16 @@ def parse_data(filename):
     attributes = data_lines[0].split(" ")
 
     return {
-        "num_rows": attributes[0],
-        "num_cols": attributes[1],
-        "num_vehicles": attributes[2],
-        "num_rides": attributes[3],
-        "bonus": attributes[4],
-        "steps": attributes[5],
-        "rows": data_lines[1:]
+        "num_rows": int(attributes[0]),
+        "num_cols": int(attributes[1]),
+        "num_vehicles": int(attributes[2]),
+        "num_rides": int(attributes[3]),
+        "bonus": int(attributes[4]),
+        "steps": int(attributes[5]),
+        "rides": [[int(i) for i in r.split(" ")] for r in data_lines[1:]]
     }
+
 
 # run
 
-parsed = parse_data("a_example.in")
+parsed = print(parse_data("a_example.in"))
