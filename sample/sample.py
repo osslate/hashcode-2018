@@ -23,6 +23,22 @@ def parse_data(filename):
         }
 
 # slide area, etc (jack)
+def slice_area(d):
+    rows = int(d['num_rows'])
+    cols = int(d['num_cols'])
+    maxSlice = int(d['cells_per_slice'])
+
+    sizeOfPizza = rows * cols
+    numOfBigSlices = sizeOfPizza / maxSlice
+
+    cord = (0, 0)
+    grid = [[cord]]
+
+
+    pizzaCut = False
+    # while not pizzaCut:
+    #     for x in range(rows):
+    #         for y in range(cols):
 
 # can be used (alex)
 def is_valid_slice(sliceSizeData,formalSliceData,ruleData,ingData, numSlice):
@@ -47,3 +63,4 @@ def is_valid_slice(sliceSizeData,formalSliceData,ruleData,ingData, numSlice):
 # RUN FILE
 
 data = parse_data("example.in")
+slice_area(data)
