@@ -23,12 +23,15 @@ def parse_data(filename):
         }
 
 # slide area, etc (jack)
-def slice_data(d):
-    rows = d['rows']
-    cols = d['cols']
+def slice_area(d):
+    rows = d['num_rows']
+    cols = d['num_cols']
     maxSlice = d['cells_per_slice']
 
-    
+    sizeOfPizza = rows * cols
+    numOfBigSlices = sizeOfPizza / maxSlice
+
+    print(numOfBigSlices)
 
 
 # can be used (alex)
